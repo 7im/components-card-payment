@@ -7,63 +7,66 @@
 
 import '@stencil/core';
 
-
+import '@stencil/redux';
 
 
 export namespace Components {
 
-  interface MyComponent {
-    /**
-    * The first name
-    */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+  interface CardPayment {
+    'amount': number;
+    'merchant': string;
+    'reference': string;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
-    /**
-    * The first name
-    */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+  interface CardPaymentAttributes extends StencilHTMLAttributes {
+    'amount'?: number;
+    'merchant'?: string;
+    'reference'?: string;
+  }
+
+  interface PaymentForm {
+    'amount': number;
+    'merchant': string;
+    'reference': string;
+  }
+  interface PaymentFormAttributes extends StencilHTMLAttributes {
+    'amount'?: number;
+    'merchant'?: string;
+    'reference'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
+    'CardPayment': Components.CardPayment;
+    'PaymentForm': Components.PaymentForm;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
+    'card-payment': Components.CardPaymentAttributes;
+    'payment-form': Components.PaymentFormAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLCardPaymentElement extends Components.CardPayment, HTMLStencilElement {}
+  var HTMLCardPaymentElement: {
+    prototype: HTMLCardPaymentElement;
+    new (): HTMLCardPaymentElement;
+  };
+
+  interface HTMLPaymentFormElement extends Components.PaymentForm, HTMLStencilElement {}
+  var HTMLPaymentFormElement: {
+    prototype: HTMLPaymentFormElement;
+    new (): HTMLPaymentFormElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
+    'card-payment': HTMLCardPaymentElement
+    'payment-form': HTMLPaymentFormElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'card-payment': HTMLCardPaymentElement;
+    'payment-form': HTMLPaymentFormElement;
   }
 
 

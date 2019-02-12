@@ -1,7 +1,7 @@
 {
-  "name": "stencil-starter-project-name",
+  "name": "components-card-payment",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "An universal web component for handling card payments",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "unpkg": "dist/ionic.js",
@@ -16,9 +16,22 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^4.3.0",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "whatwg-fetch": "^3.0.0"
+  },
   "devDependencies": {
-    "@stencil/core": "~0.16.2"
+    "@stencil/core": "~0.16.2",
+    "@stencil/redux": "0.0.4",
+    "@stencil/sass": "^0.1.1",
+    "@types/jest": "23.3.14",
+    "@types/puppeteer": "1.6.4",
+    "jest": "23.6.0",
+    "jest-cli": "23.6.0",
+    "puppeteer": "1.8.0"
   },
   "license": "MIT"
 }
