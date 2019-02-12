@@ -19,17 +19,20 @@ TODO:
 
 - [Publish to NPM](https://docs.npmjs.com/getting-started/publishing-npm-packages)
 - Put a script tag similar to this `<script src='https://unpkg.com/components-card-payment@0.0.1/dist/card-payment.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc - `<card-payment></card-payment>`
+- Then you can use the element anywhere in your template, JSX, html etc - \
+`<card-payment reference="transaction-reference" merchant="merchant-id" amount="20"></card-payment>`
 
 ### Node Modules
 - Run `npm install components-card-payment --save`
 - Put a script tag similar to this `<script src='node_modules/components-card-payment/dist/card-payment.js'></script>` in the head of your index.html
-- Then you can use the element anywhere in your template, JSX, html etc
+- Then you can use the element anywhere in your template, JSX, html etc - \
+`<card-payment reference="transaction-reference" merchant="merchant-id" amount="20"></card-payment>`
 
 ### In a stencil-starter app
 - Run `npm install components-card-payment --save`
 - Add an import to the npm packages `import components-card-payment;`
-- Then you can use the element anywhere in your template, JSX, html etc
+- Then you can use the element anywhere in your template, JSX, html etc - \
+`<card-payment reference="transaction-reference" merchant="merchant-id" amount="20"></card-payment>`
 
 
 ## Work on this component

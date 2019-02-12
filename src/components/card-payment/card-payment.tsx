@@ -11,7 +11,7 @@ import { configureStore } from '../../store';
 export class CardPayment {
   @Prop() reference: string;
   @Prop() merchant: string;
-  @Prop() amount: number;
+  @Prop() amount: number = 0;
   @Prop({ context: 'store' }) store: Store;
 
   componentWillLoad() {
@@ -24,7 +24,7 @@ export class CardPayment {
         <payment-form
           reference={this.reference}
           merchant={this.merchant}
-          amount={this.amount || 0}
+          amount={this.amount}
         />
       </div>
     );
